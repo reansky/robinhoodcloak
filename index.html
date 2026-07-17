@@ -1,598 +1,201 @@
-<!-- ===================================================
-CLOAK AI V3
-PART 1
-Navbar + Hero
-=================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robinhood Cloak $RHC</title>
 
-<header class="navbar">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-    <div class="logo">
+    body {
+      background: #050505;
+      color: white;
+      overflow-x: hidden;
+    }
 
-        <img src="assets/logo.png" alt="CLOAK AI Logo">
+    header {
+      width: 100%;
+      padding: 25px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-        <span>CLOAK AI</span>
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 22px;
+      font-weight: bold;
+    }
 
-    </div>
+    .brand img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+    }
 
-    <nav class="nav-links">
+    .links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      opacity: .8;
+    }
 
-        <a href="#tools">Tools</a>
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 8%;
+      gap: 40px;
+    }
 
-        <a href="#features">Features</a>
+    .content {
+      max-width: 550px;
+    }
 
-        <a href="#roadmap">Roadmap</a>
+    h1 {
+      font-size: 60px;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
 
-        <a href="#faq">FAQ</a>
+    h1 span {
+      color: #00ff66;
+    }
 
-    </nav>
+    p {
+      color: #bdbdbd;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
 
-    <a href="#" class="hero-btn">
-        Launch App
-    </a>
+    .buttons a {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 30px;
+      margin-right: 10px;
+      text-decoration: none;
+      color: black;
+      background: #00ff66;
+      font-weight: bold;
+    }
 
+    .buttons a.secondary {
+      background: transparent;
+      color: white;
+      border: 1px solid #333;
+    }
+
+    .hero-image img {
+      width: 430px;
+      max-width: 100%;
+      filter: drop-shadow(0 0 40px rgba(0,255,100,.3));
+    }
+
+    .card {
+      margin: 20px 8%;
+      padding: 25px;
+      background: #101010;
+      border-radius: 20px;
+      border: 1px solid #222;
+    }
+
+    .card h2 {
+      color:#00ff66;
+      margin-bottom:10px;
+    }
+
+    @media(max-width:900px){
+
+      header {
+        padding:20px;
+      }
+
+      .hero {
+        flex-direction:column;
+        text-align:center;
+        padding:30px 20px;
+      }
+
+      h1 {
+        font-size:42px;
+      }
+
+      .links {
+        display:none;
+      }
+
+      .hero-image img {
+        width:320px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    <img src="asset/logo.png" alt="logo">
+    <span>Robinhood Cloak</span>
+  </div>
+
+  <div class="links">
+    <a href="#">X</a>
+    <a href="#">Dexscreener</a>
+    <a href="#">Telegram</a>
+  </div>
 </header>
+
 
 <section class="hero">
 
-    <div class="hero-left">
-
-        <span class="badge">
-
-            AI WORKSPACE FOR ROBINHOOD CHAIN
-
-        </span>
-
-        <h1>
-
-            Build.
-
-            <br>
-
-            Launch.
-
-            <br>
-
-            Scale.
-
-        </h1>
-
-        <p>
-
-            CLOAK AI is an intelligent workspace designed for Robinhood Chain builders.
-            Generate branding, token ideas, launch strategies, social content,
-            and AI-powered utilities from one platform.
-
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#" class="primary-btn">
-
-                Launch App
-
-            </a>
-
-            <a href="#" class="secondary-btn">
-
-                Buy $CLOAK
-
-            </a>
-
-        </div>
-
-        <div class="hero-info">
-
-            <div>
-
-                🤖 AI Powered
-
-            </div>
-
-            <div>
-
-                ⚡ Fast Workflow
-
-            </div>
-
-            <div>
-
-                🔒 Secure
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="hero-right">
-
-        <img src="assets/Hero.png" alt="Hero">
-
-    </div>
-
-</section>
-
-<!-- ===================================================
-CLOAK AI V3
-PART 2
-AI Tools
-=================================================== -->
-
-<section id="tools">
-
-    <div class="section-title">
-
-        <span>AI TOOLS</span>
-
-        <h2>
-            Everything You Need
-            <br>
-            In One Workspace
-        </h2>
-
-        <p>
-            CLOAK AI combines powerful AI tools to help Robinhood Chain builders
-            launch faster, create better content, and grow stronger communities.
-        </p>
-
-    </div>
-
-    <div class="tools-grid">
-
-        <div class="tool-card">
-
-            <div class="icon">🤖</div>
-
-            <h3>Token Generator</h3>
-
-            <p>
-                Generate unique token concepts, names, tickers,
-                branding ideas and narratives in seconds.
-            </p>
-
-            <button class="tool-btn">
-                Explore
-            </button>
-
-        </div>
-
-        <div class="tool-card">
-
-            <div class="icon">🎨</div>
-
-            <h3>Brand Studio</h3>
-
-            <p>
-                Create logos, banners, memes and marketing
-                assets designed for Robinhood Chain projects.
-            </p>
-
-            <button class="tool-btn">
-                Design
-            </button>
-
-        </div>
-
-        <div class="tool-card">
-
-            <div class="icon">🚀</div>
-
-            <h3>Launch Assistant</h3>
-
-            <p>
-                Plan token launches, community growth,
-                content strategy and ecosystem expansion.
-            </p>
-
-            <button class="tool-btn">
-                Launch
-            </button>
-
-        </div>
-
-        <div class="tool-card">
-
-            <div class="icon">📈</div>
-
-            <h3>Market Analytics</h3>
-
-            <p>
-                Monitor trends, trading activity,
-                sentiment and project performance in one place.
-            </p>
-
-            <button class="tool-btn">
-                Analyze
-            </button>
-
-        </div>
-
-        <div class="tool-card">
-
-            <div class="icon">🛡️</div>
-
-            <h3>Security Scanner</h3>
-
-            <p>
-                Review contracts, detect common risks,
-                and improve confidence before deployment.
-            </p>
-
-            <button class="tool-btn">
-                Scan
-            </button>
-
-        </div>
-
-        <div class="tool-card">
-
-            <div class="icon">🌐</div>
-
-            <h3>Community Hub</h3>
-
-            <p>
-                Generate posts for X, build engagement,
-                and manage your community from one dashboard.
-            </p>
-
-            <button class="tool-btn">
-                Connect
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ===================================================
-CLOAK AI V3
-PART 3
-Tokenomics + Features
-=================================================== -->
-
-<section id="tokenomics">
-
-    <div class="section-title">
-
-        <span>TOKENOMICS</span>
-
-        <h2>The Foundation of CLOAK AI</h2>
-
-        <p>
-            Designed for long-term sustainability, ecosystem growth,
-            and community-driven innovation on Robinhood Chain.
-        </p>
-
-    </div>
-
-    <div class="tokenomics">
-
-        <div class="token-card">
-
-            <h3>Token Information</h3>
-
-            <ul>
-                <li>Total Supply <span>1,000,000,000</span></li>
-                <li>Ticker <span>$CLOAK</span></li>
-                <li>Network <span>Robinhood Chain</span></li>
-                <li>Tax <span>0%</span></li>
-            </ul>
-
-        </div>
-
-        <div class="token-card">
-
-            <h3>Distribution</h3>
-
-            <ul>
-                <li>Liquidity <span>80%</span></li>
-                <li>Community <span>15%</span></li>
-                <li>Development <span>5%</span></li>
-            </ul>
-
-        </div>
-
-        <div class="token-card">
-
-            <h3>Utility</h3>
-
-            <ul>
-                <li>AI Workspace</li>
-                <li>Premium Features</li>
-                <li>Community Rewards</li>
-                <li>Future Governance</li>
-            </ul>
-
-        </div>
-
-    </div>
-
-</section>
-
-<div class="glow-divider"></div>
-
-<section id="features">
-
-    <div class="section-title">
-
-        <span>FEATURES</span>
-
-        <h2>Why Choose CLOAK AI?</h2>
-
-        <p>
-            Powerful AI solutions crafted specifically for the Robinhood Chain ecosystem.
-        </p>
-
-    </div>
-
-    <div class="features">
-
-        <div class="feature">
-
-            <div class="feature-icon">⚡</div>
-
-            <h4>Lightning Fast</h4>
-
-            <p>
-                Generate ideas, branding and launch strategies in seconds with AI.
-            </p>
-
-        </div>
-
-        <div class="feature">
-
-            <div class="feature-icon">🤖</div>
-
-            <h4>AI Powered</h4>
-
-            <p>
-                Built with intelligent automation to simplify crypto creation.
-            </p>
-
-        </div>
-
-        <div class="feature">
-
-            <div class="feature-icon">🔒</div>
-
-            <h4>Secure</h4>
-
-            <p>
-                Privacy-first approach with reliable and transparent tools.
-            </p>
-
-        </div>
-
-        <div class="feature">
-
-            <div class="feature-icon">🌍</div>
-
-            <h4>Community First</h4>
-
-            <p>
-                Created for builders, creators and communities on Robinhood Chain.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ===================================================
-CLOAK AI V3
-PART 4 FINAL
-Roadmap + Stats + FAQ + CTA + Footer
-=================================================== -->
-
-<section id="roadmap">
-
-    <div class="section-title">
-
-        <span>ROADMAP</span>
-
-        <h2>Building The Future</h2>
-
-        <p>
-            Our vision is to become the AI operating system for the Robinhood Chain ecosystem.
-        </p>
-
-    </div>
-
-    <div class="roadmap">
-
-        <div class="phase">
-            <h3>Phase 1</h3>
-            <p>
-                Launch CLOAK AI, website, branding, social channels,
-                token deployment and community building.
-            </p>
-        </div>
-
-        <div class="phase">
-            <h3>Phase 2</h3>
-            <p>
-                Release AI Workspace, token generator,
-                branding tools and launch assistant.
-            </p>
-        </div>
-
-        <div class="phase">
-            <h3>Phase 3</h3>
-            <p>
-                Integrate Robinhood Chain analytics,
-                AI automation and community dashboard.
-            </p>
-        </div>
-
-        <div class="phase">
-            <h3>Phase 4</h3>
-            <p>
-                Expand the CLOAK AI ecosystem with
-                premium AI agents and developer APIs.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-<div class="glow-divider"></div>
-
-<section class="stats">
-
-    <div class="stat-card">
-        <h2>1B</h2>
-        <p>Total Supply</p>
-    </div>
-
-    <div class="stat-card">
-        <h2>0%</h2>
-        <p>Buy / Sell Tax</p>
-    </div>
-
-    <div class="stat-card">
-        <h2>24/7</h2>
-        <p>AI Available</p>
-    </div>
-
-    <div class="stat-card">
-        <h2>∞</h2>
-        <p>Future Potential</p>
-    </div>
-
-</section>
-
-<section id="faq" class="faq">
-
-    <div class="section-title">
-
-        <span>FAQ</span>
-
-        <h2>Frequently Asked Questions</h2>
-
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">
-            What is CLOAK AI?
-        </div>
-
-        <div class="faq-answer">
-            CLOAK AI is an AI-powered platform built to help creators,
-            traders and communities on Robinhood Chain.
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">
-            Is CLOAK AI free?
-        </div>
-
-        <div class="faq-answer">
-            Core features will be available to everyone,
-            while premium AI tools will be introduced later.
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">
-            Which network does CLOAK AI support?
-        </div>
-
-        <div class="faq-answer">
-            CLOAK AI is designed specifically for Robinhood Chain.
-        </div>
-    </div>
-
-</section>
-
-<section class="cta">
-
-    <h2>Ready To Build With AI?</h2>
+  <div class="content">
+
+    <h1>
+      The Future Of
+      <span>$RHC</span>
+      On Robinhood Chain
+    </h1>
 
     <p>
-
-        Join the next generation of builders using
-        CLOAK AI to launch smarter on Robinhood Chain.
-
+      Robinhood Cloak is a community driven meme token built for the next generation of Web3 users.
+      Simple, fast and powered by the Robinhood ecosystem.
     </p>
 
-    <div class="cta-buttons">
 
-        <a href="#" class="cta-primary">
-            Launch App
-        </a>
-
-        <a href="#" class="cta-secondary">
-            Join Community
-        </a>
-
+    <div class="buttons">
+      <a href="#">Buy $RHC</a>
+      <a href="#" class="secondary">Contract</a>
     </div>
+
+  </div>
+
+
+  <div class="hero-image">
+    <img src="asset/Hero.png" alt="Hero">
+  </div>
 
 </section>
 
-<footer>
 
-    <div class="footer-grid">
+<div class="card">
+  <h2>Robinhood Cloak $RHC</h2>
+  <p>
+    Community. Memes. Innovation. One cloak for the whole Robinhood Chain.
+  </p>
+</div>
 
-        <div>
 
-            <h3 class="footer-title">
-                CLOAK AI
-            </h3>
-
-            <p class="footer-text">
-
-                The AI Workspace for Robinhood Chain.
-
-            </p>
-
-        </div>
-
-        <div>
-
-            <h3 class="footer-title">
-                Product
-            </h3>
-
-            <div class="footer-links">
-
-                <a href="#tools">AI Tools</a>
-
-                <a href="#features">Features</a>
-
-                <a href="#roadmap">Roadmap</a>
-
-            </div>
-
-        </div>
-
-        <div>
-
-            <h3 class="footer-title">
-                Community
-            </h3>
-
-            <div class="footer-links">
-
-                <a href="#">X</a>
-
-                <a href="#">Telegram</a>
-
-                <a href="#">DexScreener</a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-        © 2026 CLOAK AI. Built for Robinhood Chain.
-
-    </div>
-
-</footer>
+</body>
+</html>
