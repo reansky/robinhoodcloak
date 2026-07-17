@@ -38,10 +38,10 @@ body{
 }
 
 
+
 #loader img{
 
     width:80px;
-    animation:pulse 1s infinite;
 
 }
 
@@ -63,16 +63,6 @@ body{
 }
 
 
-
-@keyframes pulse{
-
-    50%{
-
-        transform:scale(1.1);
-
-    }
-
-}
 
 
 
@@ -112,7 +102,6 @@ body{
 .brand img{
 
     width:45px;
-    height:45px;
 
 }
 
@@ -139,6 +128,7 @@ nav a:hover{
 
 
 
+
 /* HERO */
 
 
@@ -147,8 +137,8 @@ nav a:hover{
     min-height:85vh;
     padding:50px 8%;
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
     gap:50px;
 
 }
@@ -167,13 +157,12 @@ nav a:hover{
 
     display:inline-block;
     padding:10px 18px;
+    color:#00ff66;
     border:1px solid #00ff66;
     border-radius:30px;
-    color:#00ff66;
     background:#00ff6615;
 
 }
-
 
 
 
@@ -208,7 +197,6 @@ h1 span{
 
 
 
-
 .btn{
 
     margin-top:35px;
@@ -221,12 +209,13 @@ h1 span{
 
     display:inline-block;
     padding:15px 30px;
-    margin-right:10px;
     background:#00ff66;
-    color:black;
-    border-radius:30px;
+    color:#000;
     text-decoration:none;
+    border-radius:30px;
     font-weight:bold;
+    margin-right:10px;
+    transition:.3s;
 
 }
 
@@ -234,6 +223,7 @@ h1 span{
 
 .btn a:hover{
 
+    transform:translateY(-5px);
     box-shadow:0 0 25px #00ff66;
 
 }
@@ -253,7 +243,6 @@ h1 span{
 
 
 
-
 @keyframes float{
 
     50%{
@@ -270,17 +259,16 @@ h1 span{
 
 
 
-
 .about,
 .market,
 .token-section,
+.buy,
 .community{
 
     margin:80px 8%;
     text-align:center;
 
 }
-
 
 
 
@@ -325,31 +313,18 @@ h2{
 
 .market-card{
 
-    background:rgba(255,255,255,.05);
+    background:#111;
     border:1px solid #222;
     border-radius:25px;
     padding:30px;
-    backdrop-filter:blur(10px);
-    transition:.3s;
 
 }
-
-
-
-.market-card:hover{
-
-    transform:translateY(-10px);
-    border-color:#00ff66;
-
-}
-
 
 
 
 .market-card h3{
 
     color:#00ff66;
-    margin-bottom:15px;
 
 }
 
@@ -357,11 +332,10 @@ h2{
 
 .market-card p{
 
+    margin-top:15px;
     font-size:24px;
-    font-weight:bold;
 
 }
-
 
 
 
@@ -382,16 +356,14 @@ h2{
 
 
 
-
 .token-card{
 
     background:rgba(255,255,255,.05);
     border:1px solid #222;
-    padding:30px;
     border-radius:25px;
+    padding:30px;
 
 }
-
 
 
 
@@ -413,15 +385,97 @@ h2{
 
 
 
-.token-card button{
+
+
+.contract-box button{
 
     margin-top:15px;
-    padding:10px 20px;
+    padding:10px 25px;
     border:none;
-    border-radius:25px;
+    border-radius:30px;
     background:#00ff66;
     font-weight:bold;
     cursor:pointer;
+
+}
+
+
+
+
+
+
+
+/* HOW TO BUY */
+
+
+.steps{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+
+}
+
+
+
+.steps div{
+
+    background:#111;
+    border:1px solid #222;
+    padding:35px;
+    border-radius:25px;
+
+}
+
+
+
+.steps span{
+
+    display:inline-flex;
+    width:45px;
+    height:45px;
+    justify-content:center;
+    align-items:center;
+    background:#00ff66;
+    color:black;
+    border-radius:50%;
+    font-weight:bold;
+    margin-bottom:20px;
+
+}
+
+
+
+.steps h3{
+
+    color:#00ff66;
+    margin-bottom:10px;
+
+}
+
+
+
+.steps p{
+
+    color:#aaa;
+
+}
+
+
+
+
+
+
+/* DISCLAIMER */
+
+
+.disclaimer{
+
+    margin:50px 8%;
+    padding:25px;
+    text-align:center;
+    color:#777;
+    border-top:1px solid #222;
 
 }
 
@@ -442,22 +496,20 @@ footer{
 
 
 
-
 @media(max-width:900px){
 
 
 nav{
 
-    display:none;
+display:none;
 
 }
 
 
-
 .hero{
 
-    flex-direction:column;
-    text-align:center;
+flex-direction:column;
+text-align:center;
 
 }
 
@@ -465,16 +517,17 @@ nav{
 
 h1{
 
-    font-size:42px;
+font-size:42px;
 
 }
 
 
 
 .market-grid,
-.token-grid{
+.token-grid,
+.steps{
 
-    grid-template-columns:1fr;
+grid-template-columns:1fr;
 
 }
 
@@ -482,7 +535,7 @@ h1{
 
 .hero-image img{
 
-    width:320px;
+width:320px;
 
 }
 
