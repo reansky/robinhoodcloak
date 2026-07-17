@@ -3,58 +3,82 @@ const button = document.querySelector(".search button");
 
 const cards = document.querySelectorAll(".card");
 
-button.addEventListener("click", generate);
+let output = document.getElementById("ai-output");
 
-input.addEventListener("keydown", function(e){
+if(!output){
 
-    if(e.key==="Enter"){
-        generate();
-    }
+    output=document.createElement("div");
 
-});
+    output.id="ai-output";
+
+    output.style.margin="50px auto";
+    output.style.maxWidth="900px";
+    output.style.padding="25px";
+    output.style.background="#111";
+    output.style.border="1px solid rgba(0,200,5,.2)";
+    output.style.borderRadius="18px";
+    output.style.lineHeight="1.8";
+
+    document.querySelector(".cards").after(output);
+
+}
 
 cards.forEach(card=>{
 
-    card.addEventListener("click",()=>{
+card.onclick=()=>{
 
-        input.value=card.querySelector("h3").innerText;
+input.value=card.querySelector("h3").innerText;
 
-        generate();
+generate();
 
-    });
+};
 
 });
 
+button.onclick=generate;
+
 function generate(){
 
-    const prompt=input.value.trim();
+const prompt=input.value.trim();
 
-    if(prompt===""){
+if(prompt===""){
 
-        alert("Please enter a prompt.");
+output.innerHTML="<h3>Please enter a prompt.</h3>";
 
-        return;
+return;
 
-    }
+}
 
-    button.innerHTML="Generating...";
+output.innerHTML=`
+<h2 style="color:#00C805;">AI Output</h2>
 
-    button.disabled=true;
+<p><b>Prompt</b></p>
 
-    setTimeout(()=>{
+<p>${prompt}</p>
 
-        button.innerHTML="Generate";
+<hr style="margin:20px 0;border-color:#222;">
 
-        button.disabled=false;
+<h3>Token Name</h3>
 
-        alert(
-`Prompt:
-${prompt}
+<p>Shadow Cloak</p>
 
-🚀 AI Integration Coming Soon
+<h3>Ticker</h3>
 
-Next version will connect to a real AI model and generate professional crypto content automatically.`);
+<p>$SCLOAK</p>
 
-    },1200);
+<h3>Description</h3>
+
+<p>An AI-powered meme token built for Robinhood Chain builders.</p>
+
+<h3>Roadmap</h3>
+
+<p>
+Phase 1 • Build<br>
+Phase 2 • Community<br>
+Phase 3 • AI Tools<br>
+Phase 4 • Ecosystem
+</p>
+
+`;
 
 }
