@@ -1,32 +1,49 @@
-console.log("Robinhood Cloak $RHC Live Data System");
+console.log("Robinhood Cloak $RHC Final Script Loaded");
 
 
 
-// ======================
+// =======================
 // LOADER
-// ======================
+// =======================
+
 
 window.addEventListener("load",()=>{
 
-    const loader = document.getElementById("loader");
+
+const loader =
+document.getElementById("loader");
 
 
-    if(loader){
 
-        setTimeout(()=>{
-
-            loader.style.opacity="0";
-
-            setTimeout(()=>{
-
-                loader.style.display="none";
-
-            },500);
+if(loader){
 
 
-        },2000);
+setTimeout(()=>{
 
-    }
+
+loader.style.opacity="0";
+
+loader.style.transition="0.5s";
+
+
+
+setTimeout(()=>{
+
+
+loader.style.display="none";
+
+
+},500);
+
+
+
+},1800);
+
+
+
+}
+
+
 
 });
 
@@ -35,175 +52,49 @@ window.addEventListener("load",()=>{
 
 
 
-// ======================
+
+// =======================
 // COPY CONTRACT
-// ======================
+// =======================
 
 
 function copyCA(){
 
-    const contract =
-    document.getElementById("contract");
 
+const contract =
+document.getElementById("contract");
 
-    if(contract){
 
-        navigator.clipboard.writeText(
-            contract.innerText
-        );
 
+if(contract){
 
-        alert("Contract copied!");
 
-    }
 
-}
-
-
-
-
-
-
-
-// ======================
-// DEXSCREENER LIVE DATA
-// ======================
-
-
-// GANTI NANTI DENGAN CONTRACT ASLI $RHC
-
-const CONTRACT_ADDRESS =
-"YOUR_CONTRACT_ADDRESS";
-
-
-
-
-
-async function loadMarketData(){
-
-
-    if(CONTRACT_ADDRESS === "YOUR_CONTRACT_ADDRESS"){
-
-        console.log(
-        "Waiting for token contract..."
-        );
-
-        return;
-
-    }
-
-
-
-
-    try{
-
-
-        const response =
-        await fetch(
-        `https://api.dexscreener.com/latest/dex/tokens/${CONTRACT_ADDRESS}`
-        );
-
-
-        const data =
-        await response.json();
-
-
-
-        const pair =
-        data.pairs[0];
-
-
-
-        if(!pair){
-
-            return;
-
-        }
-
-
-
-
-        document.getElementById("price").innerText =
-        "$" + Number(
-        pair.priceUsd
-        ).toFixed(6);
-
-
-
-
-
-        document.getElementById("marketcap").innerText =
-        "$" + 
-        Number(
-        pair.marketCap
-        ).toLocaleString();
-
-
-
-
-
-
-        document.getElementById("volume").innerText =
-        "$" +
-        Number(
-        pair.volume.h24
-        ).toLocaleString();
-
-
-
-
-
-
-        document.getElementById("liquidity").innerText =
-        "$" +
-        Number(
-        pair.liquidity.usd
-        ).toLocaleString();
-
-
-
-    }
-    catch(error){
-
-
-        console.log(
-        "Dexscreener error:",
-        error
-        );
-
-
-    }
-
-
-}
-
-
-
-
-
-// Jalankan saat website dibuka
-
-loadMarketData();
-
-
-
-// Update setiap 60 detik
-
-setInterval(
-loadMarketData,
-60000
+navigator.clipboard.writeText(
+contract.innerText
 );
 
 
 
+alert("Contract copied!");
+
+
+
+}
+
+
+
+}
 
 
 
 
 
-// ======================
+
+
+// =======================
 // NAVBAR EFFECT
-// ======================
+// =======================
 
 
 window.addEventListener("scroll",()=>{
@@ -219,6 +110,7 @@ if(navbar){
 
 if(window.scrollY > 50){
 
+
 navbar.style.borderBottom =
 "1px solid #222";
 
@@ -233,7 +125,9 @@ navbar.style.borderBottom =
 }
 
 
+
 }
+
 
 
 });
@@ -244,16 +138,16 @@ navbar.style.borderBottom =
 
 
 
+// =======================
+// SCROLL REVEAL
+// =======================
 
-// ======================
-// SCROLL ANIMATION
-// ======================
 
-
-const animated =
+const elements =
 document.querySelectorAll(
-".market-card, .token-card, .about, .community"
+".market-card, .token-card, .steps div, .about, .community, .disclaimer"
 );
+
 
 
 
@@ -282,27 +176,151 @@ entry.target.style.transform =
 
 },
 {
-threshold:.2
+threshold:0.15
+});
+
+
+
+
+
+
+elements.forEach(el=>{
+
+
+el.style.opacity="0";
+
+
+el.style.transform =
+"translateY(40px)";
+
+
+el.style.transition =
+"all .8s ease";
+
+
+
+observer.observe(el);
+
+
+
+});
+
+
+
+
+
+
+
+
+// =======================
+// DEXSCREENER READY
+// =======================
+
+
+// Setelah token launch,
+// isi CONTRACT_ADDRESS
+// agar data live muncul
+
+
+
+const CONTRACT_ADDRESS =
+"YOUR_CONTRACT_ADDRESS";
+
+
+
+
+
+async function loadDexData(){
+
+
+if(
+CONTRACT_ADDRESS ===
+"YOUR_CONTRACT_ADDRESS"
+){
+
+console.log(
+"Waiting for contract address..."
+);
+
+
+return;
+
+
 }
+
+
+
+try{
+
+
+const response =
+await fetch(
+`https://api.dexscreener.com/latest/dex/tokens/${CONTRACT_ADDRESS}`
 );
 
 
 
-
-animated.forEach(item=>{
-
-
-item.style.opacity="0";
-
-item.style.transform =
-"translateY(40px)";
+const data =
+await response.json();
 
 
-item.style.transition =
-"all .8s ease";
+
+const pair =
+data.pairs[0];
 
 
-observer.observe(item);
+
+if(!pair) return;
 
 
-});
+
+document.getElementById("price").innerText =
+"$"+Number(pair.priceUsd)
+.toFixed(6);
+
+
+
+document.getElementById("marketcap").innerText =
+"$"+Number(pair.marketCap)
+.toLocaleString();
+
+
+
+document.getElementById("volume").innerText =
+"$"+Number(pair.volume.h24)
+.toLocaleString();
+
+
+
+document.getElementById("liquidity").innerText =
+"$"+Number(pair.liquidity.usd)
+.toLocaleString();
+
+
+
+}
+
+catch(error){
+
+console.log(
+"Dex error:",
+error
+);
+
+}
+
+
+
+}
+
+
+
+
+loadDexData();
+
+
+
+setInterval(
+loadDexData,
+60000
+);
