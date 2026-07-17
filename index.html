@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Cloak AI</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <div class="logo">
+    <img src="assets/logo.png" alt="Cloak AI Logo">
+    <span>CLOAK AI</span>
+  </div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Docs</a>
+    <a href="#">Launch App</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h1>Build Smarter.<br>Launch Faster.</h1>
+
+  <p>
+    The AI Workspace built for Robinhood Chain builders.
+    Generate branding, documentation and launch content in seconds.
+  </p>
+
+  <button>Start Building</button>
+
+</section>
+
+<section class="workspace">
+
+  <h2>Ask Cloak AI</h2>
+
+  <div class="chat-box">
+
+    <input
+      id="prompt"
+      type="text"
+      placeholder="Ask Cloak AI anything..."
+    >
+
+    <button id="sendBtn">
+      Send
+    </button>
+
+  </div>
+
+  <div class="quick-actions">
+
+    <button>Create Token</button>
+
+    <button>Whitepaper</button>
+
+    <button>Roadmap</button>
+
+    <button>Brand</button>
+
+    <button>X Thread</button>
+
+    <button>Checklist</button>
+
+  </div>
+
+  <div id="response" class="response"></div>
+
+</section>
+
+<footer>
+
+  © 2026 Cloak AI · Built for Robinhood Chain
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
