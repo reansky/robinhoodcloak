@@ -382,3 +382,91 @@ transform:translateY(-2px);
 box-shadow:0 0 18px rgba(0,200,5,.4);
 
 }
+/* ===========================
+   CLOAK AI OUTPUT
+=========================== */
+
+.output-section{
+    max-width:1000px;
+    margin:60px auto;
+    padding:0 20px;
+}
+
+.output-section h2{
+    color:#00C805;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+#ai-output{
+    background:#111111;
+    border:1px solid rgba(0,200,5,.25);
+    border-radius:20px;
+    padding:30px;
+    min-height:260px;
+    color:#ffffff;
+    line-height:1.8;
+    transition:.3s;
+}
+
+#ai-output:hover{
+    border-color:#00C805;
+    box-shadow:0 0 30px rgba(0,200,5,.18);
+}
+
+#ai-output h2{
+    color:#00C805;
+    margin-bottom:18px;
+}
+
+#ai-output h3{
+    color:#00C805;
+    margin-top:22px;
+}
+
+#ai-output p{
+    color:#d7d7d7;
+}
+
+#ai-output ul{
+    padding-left:20px;
+}
+
+#ai-output li{
+    margin:8px 0;
+}
+
+.output-actions{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.output-actions button{
+
+    background:#00C805;
+
+    color:#000;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:14px 22px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.output-actions button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 20px rgba(0,200,5,.35);
+
+}
