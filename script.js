@@ -3,13 +3,37 @@
    MAIN SCRIPT
 ===================================================== */
 
-window.addEventListener("load", () => {
+window.addEventListener("load",()=>{
 
-    setTimeout(() => {
+const loader=document.getElementById("loader");
 
-        document.body.classList.add("loaded");
+const bar=document.getElementById("loader-bar");
 
-    }, 1200);
+let progress=0;
+
+const timer=setInterval(()=>{
+
+progress+=4;
+
+if(bar){
+
+bar.style.width=progress+"%";
+
+}
+
+if(progress>=100){
+
+clearInterval(timer);
+
+setTimeout(()=>{
+
+document.body.classList.add("loaded");
+
+},300);
+
+}
+
+},40);
 
 });
 
