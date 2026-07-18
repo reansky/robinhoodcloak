@@ -208,3 +208,29 @@ behavior:"smooth"
 };
 
 }
+
+/* ===========================
+NAVBAR SHRINK
+=========================== */
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll",()=>{
+
+if(!navbar) return;
+
+if(window.scrollY>80){
+
+navbar.style.padding="6px 0";
+
+navbar.style.background="rgba(0,0,0,.72)";
+
+}else{
+
+navbar.style.padding="0";
+
+navbar.style.background="rgba(0,0,0,.35)";
+
+}
+
+});
