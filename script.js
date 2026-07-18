@@ -155,3 +155,56 @@ document.querySelectorAll(
 console.log("✅ Robinhood Cloak V2 Loaded");
 
 
+/* ===========================
+SCROLL EFFECT
+=========================== */
+
+const progressBar =
+document.getElementById("progress-bar");
+
+const topButton =
+document.getElementById("backToTop");
+
+window.addEventListener("scroll",()=>{
+
+const scroll=
+document.documentElement.scrollTop;
+
+const height=
+document.documentElement.scrollHeight-
+document.documentElement.clientHeight;
+
+const progress=(scroll/height)*100;
+
+if(progressBar){
+
+progressBar.style.width=
+progress+"%";
+
+}
+
+if(topButton){
+
+topButton.style.display=
+scroll>350?"flex":"none";
+
+}
+
+});
+
+
+if(topButton){
+
+topButton.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+}
