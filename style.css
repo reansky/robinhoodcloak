@@ -110,3 +110,358 @@ View Chart
 
 </body>
 </html>
+
+/* ======================================================
+   PART 2
+   VISION
+====================================================== */
+
+.vision{
+
+width:min(1200px,92%);
+margin:180px auto;
+position:relative;
+
+}
+
+.vision-container{
+
+max-width:900px;
+
+}
+
+.section-tag{
+
+display:inline-block;
+
+padding:8px 18px;
+
+border:1px solid rgba(0,214,79,.25);
+
+border-radius:999px;
+
+color:#00D64F;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+margin-bottom:28px;
+
+background:rgba(0,214,79,.04);
+
+backdrop-filter:blur(10px);
+
+}
+
+.vision h2{
+
+font-size:clamp(42px,6vw,82px);
+
+line-height:1;
+
+font-weight:900;
+
+margin-bottom:30px;
+
+max-width:760px;
+
+}
+
+.vision p:last-child{
+
+font-size:20px;
+
+line-height:1.9;
+
+color:#cfcfcf;
+
+max-width:760px;
+
+}
+
+/* ======================================================
+SECTION DIVIDER
+====================================================== */
+
+.section-line{
+
+width:min(1200px,92%);
+
+height:1px;
+
+margin:120px auto;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(0,214,79,.45),
+
+transparent
+
+);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.section-line::before{
+
+content:"";
+
+position:absolute;
+
+left:-20%;
+
+top:0;
+
+width:20%;
+
+height:100%;
+
+background:white;
+
+filter:blur(5px);
+
+animation:lineMove 5s linear infinite;
+
+}
+
+@keyframes lineMove{
+
+100%{
+
+left:120%;
+
+}
+
+}
+
+/* ======================================================
+TITLE
+====================================================== */
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:80px;
+
+}
+
+.section-title p{
+
+color:#00D64F;
+
+letter-spacing:3px;
+
+font-size:13px;
+
+margin-bottom:18px;
+
+}
+
+.section-title h2{
+
+font-size:clamp(40px,5vw,72px);
+
+line-height:1.1;
+
+font-weight:900;
+
+}
+
+/* ======================================================
+TECH GRID
+====================================================== */
+
+.technology{
+
+width:min(1200px,92%);
+
+margin:auto auto 180px;
+
+}
+
+.tech-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:30px;
+
+}
+
+.tech-card{
+
+position:relative;
+
+padding:42px;
+
+border-radius:28px;
+
+background:rgba(255,255,255,.03);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+overflow:hidden;
+
+transition:.45s;
+
+min-height:240px;
+
+}
+
+.tech-card::before{
+
+content:"";
+
+position:absolute;
+
+width:220px;
+
+height:220px;
+
+background:#00D64F;
+
+filter:blur(90px);
+
+opacity:0;
+
+right:-80px;
+
+top:-80px;
+
+transition:.45s;
+
+}
+
+.tech-card:hover{
+
+transform:translateY(-12px);
+
+border-color:rgba(0,214,79,.45);
+
+box-shadow:
+
+0 20px 70px rgba(0,214,79,.12);
+
+}
+
+.tech-card:hover::before{
+
+opacity:.22;
+
+}
+
+.tech-card h3{
+
+font-size:30px;
+
+margin-bottom:20px;
+
+font-weight:800;
+
+}
+
+.tech-card p{
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#bfbfbf;
+
+}
+
+/* ======================================================
+CARD GLOW BORDER
+====================================================== */
+
+.tech-card::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+padding:1px;
+
+border-radius:28px;
+
+background:
+
+linear-gradient(
+
+135deg,
+
+rgba(0,214,79,.25),
+
+transparent,
+
+rgba(0,214,79,.15)
+
+);
+
+-webkit-mask:
+
+linear-gradient(#fff 0 0) content-box,
+
+linear-gradient(#fff 0 0);
+
+-webkit-mask-composite:xor;
+
+mask-composite:exclude;
+
+pointer-events:none;
+
+}
+
+/* ======================================================
+RESPONSIVE
+====================================================== */
+
+@media(max-width:900px){
+
+.tech-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.vision{
+
+margin:120px auto;
+
+}
+
+.vision h2{
+
+font-size:48px;
+
+}
+
+.vision p:last-child{
+
+font-size:17px;
+
+}
+
+.tech-card{
+
+padding:30px;
+
+min-height:auto;
+
+}
+
+  }
