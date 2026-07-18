@@ -325,3 +325,4 @@ loadDexData,
 60000
 );
 
+Notify.show("🚀 Robinhood Cloak Loaded");
