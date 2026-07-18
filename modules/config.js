@@ -12,29 +12,13 @@ const CONFIG = {
 
         CHAIN: "Robinhood Chain",
 
-        VERSION: "1.0.0"
+        VERSION: "2.0.0"
 
     },
-
-
-
-    LINKS: {
-
-        WEBSITE: "",
-
-        X: "",
-
-        TELEGRAM: "",
-
-        DEX: ""
-
-    },
-
-
 
     TOKEN: {
 
-        CONTRACT: "Coming Soon",
+        CONTRACT: "PASTE_YOUR_CONTRACT_HERE",
 
         SUPPLY: "1,000,000,000",
 
@@ -42,12 +26,42 @@ const CONFIG = {
 
     },
 
+    LINKS: {
 
+        WEBSITE: "https://yourwebsite.com",
+
+        X: "https://x.com/",
+
+        TELEGRAM: "https://t.me/",
+
+        DEX: "https://dexscreener.com/"
+
+    },
+
+    AI: {
+
+        NAME: "The Cloak AI",
+
+        VERSION: "2.0"
+
+    },
 
     MARKET: {
 
-        AUTO_REFRESH: 60000
+        PRICE: "$0.000000",
+
+        MARKETCAP: "$0",
+
+        LIQUIDITY: "$0",
+
+        VOLUME: "$0",
+
+        HOLDERS: "0"
 
     }
 
 };
+
+Object.freeze(CONFIG);
+
+console.log("✅ CONFIG LOADED");
