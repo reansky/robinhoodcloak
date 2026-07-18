@@ -1516,3 +1516,107 @@ transition:.8s;
 left:150%;
 
 }
+
+/* =====================================================
+QUICK ACTIONS
+===================================================== */
+
+.quick-actions{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:8px;
+
+padding:15px 15px 0;
+
+}
+
+.quick-actions button{
+
+background:#151515;
+
+border:1px solid rgba(255,255,255,.08);
+
+color:#fff;
+
+padding:8px 14px;
+
+border-radius:999px;
+
+cursor:pointer;
+
+font-size:13px;
+
+transition:.3s;
+
+}
+
+.quick-actions button:hover{
+
+background:#00C805;
+
+color:#000;
+
+}
+
+/* =====================================================
+TYPING INDICATOR
+===================================================== */
+
+#typing-indicator{
+
+display:none;
+
+gap:5px;
+
+padding:12px 18px;
+
+}
+
+#typing-indicator span{
+
+width:8px;
+
+height:8px;
+
+border-radius:50%;
+
+background:#00C805;
+
+animation:typing .8s infinite alternate;
+
+}
+
+#typing-indicator span:nth-child(2){
+
+animation-delay:.2s;
+
+}
+
+#typing-indicator span:nth-child(3){
+
+animation-delay:.4s;
+
+}
+
+@keyframes typing{
+
+from{
+
+opacity:.3;
+
+transform:translateY(0);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(-5px);
+
+}
+
+}
