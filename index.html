@@ -7,13 +7,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Robinhood Cloak $RHC - Community driven meme token on Robinhood Chain">
-
 <title>Robinhood Cloak $RHC</title>
+
+<meta name="description" content="Robinhood Cloak $RHC - The next generation meme ecosystem on Robinhood Chain">
+
 
 <link rel="icon" href="./logo.png">
 
+
 <link rel="stylesheet" href="style.css">
+
 
 </head>
 
@@ -21,30 +24,48 @@
 <body>
 
 
+<!-- =========================
+ LOADER
+========================= -->
+
 <div id="loader">
 
-<img src="./logo.png">
+    <img src="./logo.png">
 
-<h2>Robinhood Cloak</h2>
+    <h2>Robinhood Cloak</h2>
 
-<p>$RHC Loading...</p>
+    <p>Initializing Cloak System...</p>
 
 </div>
 
 
 
-
+<!-- =========================
+ NAVBAR
+========================= -->
 
 <header id="navbar">
 
 
 <div class="brand">
 
+
 <img src="./logo.png">
 
-<span>
+
+<div>
+
+<h2>
 Robinhood Cloak
-</span>
+</h2>
+
+<small>
+$RHC • Robinhood Chain
+</small>
+
+
+</div>
+
 
 </div>
 
@@ -52,12 +73,37 @@ Robinhood Cloak
 
 <nav>
 
-<a href="#about">About</a>
-<a href="#market">Market</a>
-<a href="#buy">How To Buy</a>
-<a href="#community">Community</a>
+
+<a href="#about">
+About
+</a>
+
+
+<a href="#market">
+Market
+</a>
+
+
+<a href="#terminal">
+Terminal
+</a>
+
+
+<a href="#community">
+Community
+</a>
+
 
 </nav>
+
+
+
+<button id="terminal-toggle">
+
+⚡ Terminal
+
+</button>
+
 
 
 </header>
@@ -66,18 +112,21 @@ Robinhood Cloak
 
 
 
-
+<!-- =========================
+ HERO SECTION
+========================= -->
 
 
 <section class="hero">
 
 
-<div class="content">
+<div class="hero-content">
+
 
 
 <div class="badge">
 
-🔥 Built on Robinhood Chain
+🟢 BUILT ON ROBINHOOD CHAIN
 
 </div>
 
@@ -85,11 +134,17 @@ Robinhood Cloak
 
 <h1>
 
-The Future Of
+THE FUTURE OF
+
+<br>
 
 <span>
 $RHC
 </span>
+
+
+IS CLOAKED
+
 
 </h1>
 
@@ -97,26 +152,83 @@ $RHC
 
 <p>
 
-A community driven meme token created for the next generation of Web3 culture.
+A community driven meme ecosystem powered by culture,
+technology and the next generation of Web3 builders.
 
 </p>
 
 
 
+<div class="hero-buttons">
 
-<div class="btn">
 
-<a href="YOUR_BUY_LINK">
-Buy $RHC
+<a href="YOUR_BUY_LINK" class="primary-btn">
+
+BUY $RHC
+
 </a>
 
 
-<a href="YOUR_DEX_LINK">
-Chart
+
+<a href="YOUR_DEX_LINK" class="secondary-btn">
+
+VIEW CHART
+
 </a>
 
 
 </div>
+
+
+
+
+<div class="stats">
+
+
+<div>
+
+<h3>
+1B
+</h3>
+
+<p>
+Supply
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+0/0
+</h3>
+
+<p>
+Tax
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+RHC
+</h3>
+
+<p>
+Ticker
+</p>
+
+</div>
+
+
+</div>
+
+
 
 
 </div>
@@ -127,474 +239,15 @@ Chart
 
 <div class="hero-image">
 
+
+<div class="glow"></div>
+
+
 <img src="./hero.png">
 
+
 </div>
 
 
 
 </section>
-
-
-
-
-
-
-
-
-
-<section id="about" class="about">
-
-
-<h2>
-About Robinhood Cloak
-</h2>
-
-
-<p>
-
-Robinhood Cloak $RHC is a community-powered meme token focused on creativity, community and decentralized culture.
-
-</p>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section id="market" class="market">
-
-
-<h2>
-Live Market
-</h2>
-
-
-
-<div class="market-grid">
-
-
-<div class="market-card">
-
-<h3>
-Price
-</h3>
-
-<p id="price">
-$0.00
-</p>
-
-</div>
-
-
-
-<div class="market-card">
-
-<h3>
-Market Cap
-</h3>
-
-<p id="marketcap">
-$0
-</p>
-
-</div>
-
-
-
-
-<div class="market-card">
-
-<h3>
-Volume 24H
-</h3>
-
-<p id="volume">
-$0
-</p>
-
-</div>
-
-
-
-
-<div class="market-card">
-
-<h3>
-Liquidity
-</h3>
-
-<p id="liquidity">
-$0
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section class="token-section">
-
-
-<h2>
-Token Information
-</h2>
-
-
-
-<div class="token-grid">
-
-
-<div class="token-card">
-
-
-<h3>
-Contract
-</h3>
-
-
-<div class="contract-box">
-
-
-<p id="contract">
-
-YOUR_CONTRACT_ADDRESS
-
-</p>
-
-
-<button onclick="copyCA()">
-
-COPY
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<div class="token-card">
-
-<h3>
-Network
-</h3>
-
-<p>
-Robinhood Chain
-</p>
-
-</div>
-
-
-
-
-
-<div class="token-card">
-
-<h3>
-Supply
-</h3>
-
-<p>
-1,000,000,000
-</p>
-
-</div>
-
-
-
-
-
-<div class="token-card">
-
-<h3>
-Tax
-</h3>
-
-<p>
-0 / 0
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section id="buy" class="buy">
-
-
-<h2>
-How To Buy $RHC
-</h2>
-
-
-
-<div class="steps">
-
-
-<div>
-
-<span>
-1
-</span>
-
-<h3>
-Connect Wallet
-</h3>
-
-<p>
-Connect your Web3 wallet.
-</p>
-
-</div>
-
-
-
-
-<div>
-
-<span>
-2
-</span>
-
-<h3>
-Swap Token
-</h3>
-
-<p>
-Buy $RHC through the official DEX.
-</p>
-
-</div>
-
-
-
-
-
-<div>
-
-<span>
-3
-</span>
-
-<h3>
-Join Community
-</h3>
-
-<p>
-Follow updates and become part of the movement.
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section id="community" class="community">
-
-
-<h2>
-Join The Community
-</h2>
-
-
-<p>
-Follow Robinhood Cloak $RHC
-</p>
-
-
-
-<div class="btn">
-
-<a href="YOUR_X_LINK">
-X
-</a>
-
-
-<a href="YOUR_TELEGRAM_LINK">
-Telegram
-</a>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section class="disclaimer">
-
-
-<p>
-
-Disclaimer: Cryptocurrency involves risk. Always do your own research before participating.
-
-</p>
-
-
-</section>
-
-
-
-
-
-
-
-
-<footer>
-
-© 2026 Robinhood Cloak $RHC
-
-</footer>
-
-
-
-
-
-<!-- ===========================
-     THE CLOAK AI
-=========================== -->
-
-<div id="cloak-toggle">
-
-    <img src="./logo.png" alt="The Cloak">
-
-    <span>Ask The Cloak</span>
-
-</div>
-
-
-<div id="cloak-chat">
-
-    <div class="cloak-header">
-
-        <div class="cloak-title">
-
-            <img src="./logo.png">
-
-            <div>
-
-                <h3>The Cloak AI</h3>
-
-                <small>Online</small>
-
-            </div>
-
-        </div>
-
-        <button id="close-chat">
-            ✕
-        </button>
-
-    </div>
-
-
-
-    <div id="chat-messages">
-
-        <div class="bot-message">
-
-            👋 Welcome, Cloaked One.
-
-            <br><br>
-
-            Ask me anything about Robinhood Cloak.
-
-        </div>
-
-    </div>
-
-
-
-    <div class="chat-input">
-
-        <input
-            id="user-input"
-            type="text"
-            placeholder="Ask The Cloak..."
-        >
-
-        <button id="send-message">
-
-            Send
-
-        </button>
-
-    </div>
-
-</div>
-
-
-
-
-
-<script src="modules/config.js"></script>
-<script src="modules/utils.js"></script>
-<script src="modules/notifications.js"></script>
-<script src="modules/animations.js"></script>
-<script src="modules/ai.js"></script>
-<script src="modules/market.js"></script>
-<script src="modules/wallet.js"></script>
-<script src="modules/terminal.js"></script>
-<script src="script.js"></script>
-
-
-
-</body>
-
-</html>
