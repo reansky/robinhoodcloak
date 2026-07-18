@@ -145,3 +145,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+/* ===========================
+QUICK ACTIONS
+=========================== */
+
+document.querySelectorAll(".quick-actions button").forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+input.value=btn.dataset.question;
+
+sendMessage();
+
+});
+
+});
+
+
+/* ===========================
+TYPING EFFECT
+=========================== */
+
+const typing=
+
+document.getElementById("typing-indicator");
+
+const oldSend=sendMessage;
+
+sendMessage=function(){
+
+const text=input.value.trim();
+
+if(text==="") return;
+
+user(text);
+
+input.value="";
+
+typing.style.display="flex";
+
+setTimeout(()=>{
+
+typing.style.display="none";
+
+bot(reply(text));
+
+},700);
+
+};
